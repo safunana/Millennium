@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Millennium Books - Luso la M'manja</title>
+  <style>
+    body { font-family: Arial; background: #f9f5f0; margin: 0; padding: 10px; }
+ .header { background: #d35400; color: white; padding: 15px; text-align: center; }
+ .product,.basket,.payment { background: white; padding: 15px; border-radius: 10px; margin: 10px 0; box-shadow: 0 2px 5px gray; }
+    img { width: 100%; max-width: 200px; border-radius: 8px; }
+    button { background: #e67e22; color: white; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; width: 100%; margin-top: 10px; }
+ .btn-pay { background: #27ae60; margin: 5px 0; }
+ .btn-airtel { background: #e60000; }
+ .btn-tnm { background: #0066cc; }
+ .btn-emola { background: #6c5ce7; }
+ .btn-remove { background: #c0392b; padding: 5px 10px; font-size: 14px; width: auto; }
+    select, input { padding: 10px; font-size: 16px; margin: 5px 0; width: 100%; box-sizing: border-box; }
+ .basket-item { border-bottom: 1px solid #ddd; padding: 8px 0; text-align: left; }
+    #basket-count { background: #fff; color: #d35400; border-radius: 50%; padding: 2px 8px; font-size: 14px; font-weight: bold; }
+ .hidden { display: none; }
+   .notice { background: #fff73cd; padding: 10px; border-radius: 5px; font-size: 14px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Millennium Books 📚</h1>
+    <p>Mabuku a Luso la M'manja ndi Kuphika</p>
+    <p>Cart: <span id="basket-count">0</span></p>
+  </div>
+
+<section class="products">
+  <h2>Mabuku Athu - Millennium Books</h2>
+
+  <!-- Buku 1 -->
+  <div class="product">
+    <img src="kuphika-15-cover.jpg" alt="Kuphika Zakudya 15 Zaku Malawi">
+    <h3>Kuphika Zakudya 15 Zaku Malawi</h3>
+    <p>Phunzirani kuphika zakudya 15 zokoma za ku Malawi. Tsatane-tsatane ndi zithunzi.</p>
+    <p class="price"><b>Mtengo: 5,000 Kwacha</b> - E-Book PDF</p>
+    <button onclick="alert('Lipirani 5,000 Kwacha pa Airtel Money 0988005779. kapena mpamba 0899724191 Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire buku.')">
+      Gulani Tsopano
+    </button>
+  </div>
+
+  <!-- Buku 2 -->
+  <div class="product">
+    <img src="baking-cover.jpg" alt="Baking and Cooking & Manufacturing">
+    <h3>Baking and Cooking & Manufacturing</h3>
+    <p>Phunzirani kupanga keke, mandasi, ndi kupanga zinthu zogulitsa. Yambitsani bakery kunyumba.</p>
+    <p class="price"><b>Mtengo: 5,000 Kwacha</b> - E-Book PDF</p>
+    <button onclick="alert('Lipirani 5,000 Kwacha pa Airtel Money 0988005779. kapena mpamba 0899724191 Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire buku.')">
+      Gulani Tsopano
+    </button>
+  </div>
+
+  <!-- Buku 3 -->
+  <div class="product">
+    <img src="sopo-cover.jpg" alt="Kupanga Sopo ndi Zina">
+    <h3>Kupanga Sopo ndi Zina</h3>
+    <p>Ndondomeko yathunthu yopangira sopo wamadzimadzi, chigoba cha tsitsi, ndi mafuta onunkhira.</p>
+    <p class="price"><b>Mtengo: 5,000 Kwacha</b> - E-Book PDF</p>
+    <button onclick="alert('Lipirani 5,000 Kwacha pa Airtel Money 0988005779. kapena mpamba 0899724191 Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire buku.')">
+      Gulani Tsopano
+    </button>
+  </div>
+
+  <!-- Buku 4 -->
+  <div class="product">
+    <img src="ulimi-wa-nsomba.jpg" alt="Ulimi wa Nsomba">
+    <h3>Ulimi wa Nsomba wa Makono</h3>
+    <p>Phunzirani kumanga damu, kudyetsa nsomba, ndi kupanga 6 Million Kwacha pa chaka.</p>
+    <p class="price"><b>Mtengo: 8,000 Kwacha</b> - E-Book PDF</p>
+    <button onclick="alert('Lipirani 8,000 Kwacha pa Airtel Money 0988005779.kapena mpamba 0899724191Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire buku.')">
+      Gulani Tsopano
+    </button>
+  </div>
+
+  <!-- Buku 5 -->
+  <div class="product">
+    <img src="business-ideas-cover.jpg" alt="Ma Business Ideas Ku Malawi">
+    <h3>Ma Business Ideas Ku Malawi</h3>
+    <p>Ndondomeko zathunthu za business 30 zomwe mungayambire ndi ndalama zochepa.</p>
+    <p class="price"><b>Mtengo: 8,000 Kwacha</b> - E-Book PDF</p>
+    <button onclick="alert('Lipirani 8,000 Kwacha pa Airtel Money 0988005779. kapena mpamba 0899724191 Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire buku.')">
+      Gulani Tsopano
+    </button>
+  </div>
+
+  <!-- Package Deal -->
+  <div class="product" style="background:#e8f5e8; border:2px solid #28a745; padding:15px;">
+    <h3> PACKAGE DEAL - GULANI ONSE 5</h3>
+    <p>Pezani mabuku onse 5 a Millennium Books</p>
+    <p class="price"><del>31,000 Kwacha</del> <b>Mtengo: 25,000 Kwacha Chabe</b></p>
+    <p>Sungani 6,000 Kwacha!</p>
+    <button onclick="alert('Lipirani 25,000 Kwacha pa Airtel Money 0988005779. kapena pa mpamba 0899724191 Tumizani Transaction ID pa WhatsApp 0899724191 kuti mulandire mabuku onse 5.')">
+      Gulani Package Tsopano
+    </button>
+  </div>
+
+</section>
+
+    <label>Mtundu wa buku:</label>
+    <select id="cover">
+      <option>E-book - PDF</option>
+    </select>
+
+    <label>Angati:</label>
+    <input type="number" id="quantity" value="1" min="1">
+
+    <button onclick="addToBasket()">Ikani mu Cart</button>
+  </div>
+
+  <div class="basket">
+    <h2>Mu Cart yanu</h2>
+    <div id="basket-items">
+      <p>Palibe buku mu Cart</p>
+    </div>
+    <h3 id="basket-total">Total: 0 Kwacha</h3>
+    <button onclick="showPayment()">Pitilizani Kulipira</button>
+  </div>
+
+  <div class="payment hidden" id="payment-section">lipirani</>
+    <h2>Sankha Njira Yolilipira</h2>
+    <p><b>Zonse zoti mulipire: <span id="final-total">0 Kwacha</span></b></p>
+
+    <button class="btn-pay btn-airtel" onclick="payAirtel()">Lipira ndi Airtel Money</button>
+    <button class="btn-pay btn-tnm" onclick="payTNM()">Lipira ndi TNM Mpamba</button>
+    <button class="btn-pay" onclick="payWhatsapp()">Tumizani Uthenga wa Oda pa WhatsApp</button>
+
+    <div class="notice">
+      <b>Zindikirani:</b> Mukalipira, tumizani <b>Transaction ID</b> ndi <b>Dzina Lanu</b> pa WhatsApp kuti tikutumizireni buku. Tidzatumiza buku pa WhatsApp kapena Email.
+    </div>
+  </div>
+
+  <script>
+    let basket = [];
+    let finalAmount = 0;
+
+    // MANAMBALA AKO ALI APA
+    const AIRTEL_NUMBER = "0988005779";
+    const TNM_NUMBER = "0899724191";
+    const WHATSAPP_NUMBER = "258899724191"; // Ndaika ya TNM ngati WhatsApp
+
+    function getBookPrice() {
+      let bookSelect = document.getElementById('book-type').value;
+      if (bookSelect.includes('5000')) return 180;
+      if (bookSelect.includes('5000')) return 150;
+      if (bookSelect.includes('5000')) return 200;
+      if (bookSelect.includes('8000')) return 130;
+      if (bookSelect.includes('8000')) return 170;
+    }
+
+    function addToBasket() {
+      let book = document.getElementById('book-type').value.split(' - ')[0];
+      let cover = document.getElementById('cover').value;
+      let qty = parseInt(document.getElementById('quantity').value);
+      let price = getBookPrice();
+      if (cover.includes('Hardcover')) price += 70;
+      let totalPrice = price * qty;
+      basket.push({ book, cover, qty, price: totalPrice });
+      updateBasket();
+      alert('Buku lawonjezedwa ku dengu!');
+    }
+
+    function removeFromBasket(index) {
+      basket.splice(index, 1);
+      updateBasket();
+    }
+
+    function updateBasket() {
+      let basketDiv = document.getElementById('basket-items');
+      let total = 0;
+      if (basket.length === 0) {
+        basketDiv.innerHTML = '<p>Palibe buku mu Cart</p>';
+      } else {
+        basketDiv.innerHTML = '';
+        basket.forEach((item, index) => {
+          total += item.price;
+          basketDiv.innerHTML += `
+            <div class="basket-item">
+              ${item.qty}x ${item.book}<br>
+              <small>${item.cover}</small> = <b>${item.price} Kwacha</b>
+              <button class="btn-remove" onclick="removeFromBasket(${index})">Chotsa</button>
+            </div>
+          `;
+        });
+      }
+      finalAmount = total;
+      document.getElementById('basket-total').innerText = 'Total: ' + total + ' Kwacha';
+      document.getElementById('basket-count').innerText = basket.length;
+      document.getElementById('final-total').innerText = total + ' Kwacha';
+    }
+
+    function showPayment() {
+      if (basket.length === 0) {
+        alert('Dengu lilibe kanthu! Onjezani buku kaye.');
+        return;
+      }
+      document.getElementById('payment-section').classList.remove('hidden');
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function getOrderMessage() {
+      let message = `MONI! Ndalipira oda ya mabuku:%0A%0A`;
+      basket.forEach((item, i) => {
+        message += `${i+1}. ${item.qty}x ${item.book}%0A Mtundu: ${item.cover}%0A Mtengo: ${item.price} Kwacha%0A%0A`;
+      });
+      message += `Zonse: ${finalAmount} MT%0A%0ATransaction ID: _______ %0ADzina langa: _______%0ANambala ya WhatsApp: _______`;
+      return message;
+    }
+
+    function payAirtel() {
+      alert(`Tsegulani Airtel Money ndi dial: *211*1*1*${AIRTEL_NUMBER}*${finalAmount}# %0A%0AKapena tumizani ${finalAmount} MT ku: ${AIRTEL_NUMBER}%0A%0AMukalipira, dinani OK kuti mutumize Transaction ID pa WhatsApp.`);
+      let url = `tel:*211*1*1*${AIRTEL_NUMBER}*${finalAmount}%23`;
+      window.open(url);
+      setTimeout(() => {
+        let waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${getOrderMessage()}`;
+        window.open(waUrl);
+      }, 2000);
+    }
+
+    function payTNM() {
+      alert(`Tsegulani TNM Mpamba ndi dial: *444*1*1*${TNM_NUMBER}*${finalAmount}# %0A%0AKapena tumizani ${finalAmount} Mwk ku: ${TNM_NUMBER}%0A%0AMukalipira, dinani OK kuti mutumize Transaction ID pa WhatsApp.`);
+      let url = `tel:*444*1*1*${TNM_NUMBER}*${finalAmount}%23`;
+      window.open(url);
+      setTimeout(() => {
+        let waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${getOrderMessage()}`;
+        window.open(waUrl);
+      }, 2000);
+    }
+
+    function payEmola() {
+      alert(`Lipira ${finalAmount} Kwacha ku E-Mola kapena Empesa. %0A%0AGwiritsani App kapena dial *898# %0A%0AMukalipira, dinani OK kuti mutumize Transaction ID pa WhatsApp. Nambala: ${AIRTEL_NUMBER}`);
+      let waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${getOrderMessage()}`;
+      window.open(waUrl);
+    }
+
+    function payWhatsapp() {
+      let waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${getOrderMessage()}`;
+      window.open(waUrl);
+    }
+  </script>
+
+</body>
+</html>
